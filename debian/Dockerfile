@@ -7,5 +7,7 @@ RUN apt-get clean && apt-get update && apt-get --no-install-recommends -y instal
 ADD supervisord.conf /etc/supervisord.conf
 ADD rsyslog.conf /etc/rsyslog.conf
 
+RUN mkdir /var/log/supervisor/
+
 EXPOSE  993 
 CMD ["supervisord","-n","-c","/etc/supervisord.conf"]
