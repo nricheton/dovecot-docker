@@ -12,6 +12,4 @@ RUN mkdir /var/log/supervisor/
 
 EXPOSE  993 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
-
-HEALTHCHECK CMD nslookup docker.richeton.com localhost
 CMD ["supervisord","-n","-c","/etc/supervisord.conf"]
