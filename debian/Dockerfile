@@ -1,4 +1,4 @@
-FROM debian:stable-slim 
+FROM debian:oldstable-slim 
 
 RUN groupadd -r -g 2000 vmail   && useradd --no-log-init -r -g vmail -u 2000 vmail
 
